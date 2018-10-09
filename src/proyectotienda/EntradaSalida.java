@@ -5,6 +5,7 @@
  */
 package proyectotienda;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -44,5 +45,21 @@ public class EntradaSalida {
         int precio=sc.nextInt();
         Producto p=new Producto(descripcion, precio);
         return p;
+    }
+
+    static void mostrarTienda(Tienda t2) {
+        String direccion=t2.getDireccion();
+        String cif=t2.getCif();
+        System.out.println("La tienda tiene CIF: "+cif+" y dirección:"+direccion);
+        ArrayList<Producto> lista=t2.getLista_productos();
+        for (int i=0; i<lista.size(); i++)
+        {
+            Producto p=lista.get(i);
+            System.out.println("PRODUCTO: "+p.getDescripcion()+
+                    " PRECIO: "+p.getPrecio());
+            
+            System.out.println("PRODUCTO: "+lista.get(i).getDescripcion()+
+                    " PRECIO: "+lista.get(i).getPrecio());
+        }
     }
 }

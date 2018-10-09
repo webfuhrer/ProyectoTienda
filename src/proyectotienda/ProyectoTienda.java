@@ -38,7 +38,7 @@ public class ProyectoTienda {
        Tienda t=new Tienda(cif, direccion, lista);
         AccesoFichero.grabarTienda(t);
         Tienda t2=AccesoFichero.leerTienda();
-        EntradaSalida.mostrarTienda(t2);
+       EntradaSalida.mostrarTienda(t2);
     }
     
 }
